@@ -1,0 +1,24 @@
+<hello name="{{ name }}"></hello>
+
+<h3>Danh sách User: Chọn 1 user để xem post và album</h3>
+<ul *ngFor="let i of data">
+  <li (click)="getData(i)" style="cursor: pointer">{{ i.name }}</li>
+</ul>
+
+
+<table>
+  <th>Post</th>
+  <th>Album</th>
+  <tr>
+    <td>
+      <ul *ngFor="let i of postList">
+        <li>{{i.title}}</li>
+      </ul>
+    </td>
+    <td>
+      <ul *ngFor="let i of albumList">
+        <li>{{i.title}}</li>
+      </ul>
+    </td>
+  </tr>
+</table>
